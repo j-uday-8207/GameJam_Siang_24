@@ -9,6 +9,8 @@ public class Finish : MonoBehaviour
     [SerializeField] GameObject[] cherries;
 
     [SerializeField] TextMeshProUGUI finish_text;
+    [SerializeField] private AudioSource completesoundEffect;
+    public Timer_controll tim1;
     private void Start()
     {
         finish_text.text = "";
@@ -22,10 +24,12 @@ public class Finish : MonoBehaviour
             if (count <= 2)
             {
                 finish_text.text = "Need at least 3 collectibles";
-                Invoke("EmptyText", 2f);
+                Invoke("EmptyText", 0.5f);
             }
             else
             {
+                tim1.o2depletedsoundEffect.Stop();
+                completesoundEffect.Play();
                 Invoke("CompleteLevel", 2f);
             }
         }

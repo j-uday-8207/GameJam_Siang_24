@@ -12,9 +12,54 @@ EditorBuildSettings:
     path: Assets/Scenes/Info.unity
     guid: a078f2297c91ac84da4bb5037fd2d0ab
   - enabled: 1
+    path: Assets/Scenes/Story 1.unity
+    guid: 4299641c3df5fd6479bb29139bb4bc14
+  - enabled: 1
+    path: Assets/Scenes/Story 2.unity
+    guid: 3e9b3d7204a45144cb1f6a9c8f123dae
+  - enabled: 1
+    path: Assets/Scenes/Story 3.unity
+    guid: edfe7431637b70b4b8f6da964499b533
+  - enabled: 1
+    path: Assets/Scenes/Story 4.unity
+    guid: 237759c4cd7565e4f8fdc4b59490ddfd
+  - enabled: 1
+    path: Assets/Scenes/Story 5.unity
+    guid: 768ef43a1782ba446832bc34675c7597
+  - enabled: 1
+    path: Assets/Scenes/Story 6.unity
+    guid: 914c62895b1226349bbcfb82171ec0e5
+  - enabled: 1
+    path: Assets/Scenes/Story 7.unity
+    guid: 85a884a82eb8f8e44a33e391077e60f7
+  - enabled: 1
     path: Assets/Scenes/Level1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    guid: 348e9397cb1410849948e2b9539793e5
   - enabled: 1
     path: Assets/Scenes/Level2.unity
-    guid: 51e35cc0cc92f71428e99801f94b0d01
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: Assets/Scenes/Level2.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: dd7d046e698c45f4c8e0aba2eb6c7420
+  - enabled: 1
+    path: Assets/Scenes/Story 9.unity
+    guid: 2b69b3f59ad8ac34aabe56eddcc74000
+  - enabled: 1
+    path: Assets/Scenes/Story 10.unity
+    guid: 60023f4bb3918d84a9f94e87478f02a7
+  - enabled: 1
+    path: Assets/Scenes/Story 11.unity
+    guid: c2250b5000d642b4f9330d4b3707faec
+  - enabled: 1
+    path: Assets/Scenes/Story 12.unity
+    guid: 8be6ed054488dff4596d896b59d03ac7
+  - enabled: 1
+    path: Assets/Scenes/LevelsPage.unity
+    guid: 27ec2290499e7e34895d3a690122e3f9
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: 2cfd938f41ff89247840d3b7b8c6dc1c
   m_configObjects: {}

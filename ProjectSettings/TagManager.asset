@@ -15,7 +15,7 @@ TagManager:
   - UI
   - Terrain
   - Ground
-  - 
+  - www
   - 
   - 
   - 
@@ -43,6 +43,9 @@ TagManager:
   - name: UI
     uniqueID: 3548255289
     locked: 0
+  - name: BG1
+    uniqueID: 1638011665
+    locked: 0
   - name: Behind
     uniqueID: 2554960503
     locked: 0
@@ -54,4 +57,7 @@ TagManager:
     locked: 0
   - name: Trapmap
     uniqueID: 3722548899
+    locked: 0
+  - name: TEXT
+    uniqueID: 3899401291
     locked: 0
