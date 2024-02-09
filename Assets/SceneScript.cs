@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneScript : MonoBehaviour
 {
-   
+    [SerializeField] private AudioSource clicksoundEffect1;
     public void Next()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -13,7 +13,7 @@ public class SceneScript : MonoBehaviour
 
     public void Skip()
     {
-        SceneManager.LoadScene(9);
+        SceneManager.LoadScene(8);
     }
 
     public void Skip2()
@@ -23,6 +23,7 @@ public class SceneScript : MonoBehaviour
 
     public void Quitgame()
     {
+        clicksoundEffect1.Play();
         Application.Quit();
     }
 

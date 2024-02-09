@@ -15,7 +15,7 @@ public class AstroLife : MonoBehaviour
 
     private void Start()
     {
-        anim = GetComponent<Animator>();
+satron        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         
     }
