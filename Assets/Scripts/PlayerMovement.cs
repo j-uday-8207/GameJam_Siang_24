@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer sprite;
     private Animator anim;
     private BoxCollider2D coll;
+    [SerializeField] private AudioSource jumpsoundEffect;
+    [SerializeField] private AudioSource collectsoundEffect;
+    [SerializeField] private AudioSource dropsoundEffect;
 
     private float dirx = 0f;
     private float multiplier = 1f;
@@ -60,11 +63,13 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
+            jumpsoundEffect.Play();
             rb.velocity = new Vector2(rb.velocity.x, jumpForce * multiplier);
         }
 
-        if(Input.GetKeyDown("1"))
+        if(Input.GetKeyDown(KeyCode.S) && cherries_count > 0)
         {
+            dropsoundEffect.Play();
             ItemDrop();
         }
 
@@ -76,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Cherry"))
         {
+            collectsoundEffect.Play();
             cherries_count++;
             collision.gameObject.SetActive(false);
             cherries_text.text = "Object : " + cherries_count.ToString();

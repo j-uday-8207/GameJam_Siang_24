@@ -16,7 +16,9 @@ public class WaypointFollower : MonoBehaviour
             if (currentWaypointIndex >= waypoints.Length)
             {
                 currentWaypointIndex = 0;
+                
             }
+
         }
         transform.position = Vector2.MoveTowards(transform.position, waypoints[currentWaypointIndex].transform.position, Time.deltaTime * speed);
     }

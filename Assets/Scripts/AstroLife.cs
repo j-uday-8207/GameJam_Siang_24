@@ -7,12 +7,17 @@ public class AstroLife : MonoBehaviour
 {
     private Animator anim;
     private Rigidbody2D rb;
+    public int Level_index;
+    public bool Check = true;
+    [SerializeField] public AudioSource deathsoundEffect;
+    public Timer_controll tim2;
 
 
     private void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        
     }
 
 
@@ -20,6 +25,14 @@ public class AstroLife : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Trap"))
         {
+            tim2.o2depletedsoundEffect.Stop();
+            deathsoundEffect.Play();
+            if (Check)
+            {
+                PlayerPrefs.SetInt("Scene_State", SceneManager.GetActiveScene().buildIndex);
+                Check = false;
+            }
+            Debug.Log(Level_index);
             Die();
         }
     }
@@ -33,6 +46,8 @@ public class AstroLife : MonoBehaviour
 
     public void RestartLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(17);
     }
+
+    
 }

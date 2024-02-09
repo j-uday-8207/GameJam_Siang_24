@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer_controll : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Timer_controll : MonoBehaviour
     public float max_time = 30f;
     float time_rem;
     private bool check = false;
+    private bool flag = false;
+    [SerializeField] public AudioSource o2depletedsoundEffect;
     
     void Start()
     {
@@ -24,13 +27,20 @@ public class Timer_controll : MonoBehaviour
             timer_linear_remaning.fillAmount = time_rem / max_time;
             time_rem -= Time.deltaTime;
         } 
-        else if(time_rem<=0f && check == false)
+        else if(time_rem<0f && check == false)
         {
+            aa.deathsoundEffect.Play();
+            PlayerPrefs.SetInt("Scene_State", SceneManager.GetActiveScene().buildIndex);
+            o2depletedsoundEffect.Stop();
             aa.Die();
             check = true;
         }
 
-
+        if(time_rem < 0.3f * max_time && flag == false )
+        {
+            o2depletedsoundEffect.Play();
+            flag = true;
+        }
         
     }
 
